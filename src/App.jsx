@@ -1,9 +1,9 @@
 // 샘플 데이터
 
-import './main.css';
-import Filter from './components/Filter';
-import CardList from './components/CardList';
 import { useState } from 'react';
+import CardList from './components/CardList';
+import Filter from './components/Filter';
+import './main.css';
 
 const DATA = [
     { id: 1, title: '기술 카드 1', description: '이것은 첫 번째 카드의 설명입니다.', category: '기술' },
@@ -20,6 +20,7 @@ export default function Home() {
 
     const filteredData = filterCategory === '전체' ? DATA : DATA.filter((item) => item.category === filterCategory);
 
+    // console.log("filteredData", filteredData)
     return (
         <main className="container">
             <h1>카드 렌더링</h1>
